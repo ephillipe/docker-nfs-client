@@ -14,7 +14,7 @@ for mnt in "${mounts[@]}"; do
 
   mkdir -p $target
 
-  mount -t nfs -o proto=tcp,port=2049 ${NFS_PORT_2049_TCP_ADDR}:${src} ${target}
+  mount -t nfs -o nolock,proto=tcp,port=2049 ${NFS_PORT_2049_TCP_ADDR}:${src} ${target}
 done
 
 exec inotifywait -m "${targets[@]}"
