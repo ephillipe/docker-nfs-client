@@ -13,7 +13,7 @@ for mnt in "${mounts[@]}"; do
   targets+=("$target")
   mkdir -p $target
   mount -t nfs -o proto=tcp,port=2049 ${NFS_PORT_2049_TCP_ADDR}:${src} ${target}
-  echo "mount -t nfs -o proto=tcp,port=2049 ${NFS_PORT_2049_TCP_ADDR}:${src} ${target}"
+  echo "Added: mount -t nfs -o proto=tcp,port=2049 ${NFS_PORT_2049_TCP_ADDR}:${src} ${target}"
 done
 
 exec inotifywait -m "${targets[@]}"
