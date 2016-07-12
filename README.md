@@ -1,4 +1,4 @@
-Docker NFS Server
+Docker NFS Client
 ================
 
 Usage
