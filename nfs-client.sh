@@ -4,7 +4,7 @@ set -e
 
 mounts="${@}"
 targets=()
-PARAMS="${PARAMS:-proto=tcp,port=2049}"
+PARAMS="${PARAMS:-ac,proto=tcp,port=2049}"
 
 rpcbind
 
